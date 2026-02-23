@@ -14,3 +14,11 @@ function changeTab(tabName, buttonElement) {
     
     refreshUI();
 }
+
+function deleteCard(jobId) {
+    const card = document.getElementById(jobId);
+    if (card) {
+        card.remove();
+        refreshUI();
+    }
+}
