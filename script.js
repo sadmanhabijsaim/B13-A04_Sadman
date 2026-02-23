@@ -15,10 +15,15 @@ function changeTab(tabName, buttonElement) {
     refreshUI();
 }
 
-function deleteCard(jobId) {
+function updateStatus(jobId, newStatus) {
     const card = document.getElementById(jobId);
-    if (card) {
-        card.remove();
-        refreshUI();
+    const currentStatus = card.getAttribute('data-status');
+    
+    if (currentStatus === newStatus) {
+        card.setAttribute('data-status', 'all');
+    } else {
+        card.setAttribute('data-status', newStatus);
     }
+    
+    refreshUI();
 }
