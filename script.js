@@ -15,6 +15,14 @@ function changeTab(tabName, buttonElement) {
     refreshUI();
 }
 
+function deleteCard(jobId) {
+    const card = document.getElementById(jobId);
+    if (card) {
+        card.remove();
+        refreshUI();
+    }
+}
+
 function updateStatus(jobId, newStatus) {
     const card = document.getElementById(jobId);
     const currentStatus = card.getAttribute('data-status');
