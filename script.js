@@ -92,3 +92,10 @@ function refreshUI() {
         noJobsDiv.classList.remove('flex');
     }
 }
+
+window.onload = function() {
+    const firstTab = document.querySelector('.tab-btn');
+    if (firstTab) {
+        changeTab('all', firstTab);
+    }
+};
