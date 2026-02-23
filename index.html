@@ -42,7 +42,150 @@
 
         <hr class="text-gray-300 mb-10">
     </header>
+    <main>
+        <div class="flex justify-between items-center mb-6">
+            <h3 class="text-xl font-bold text-[#002C5C]">Available Jobs</h3>
+            <span class="text-gray-500 font-medium"><span id="section-count">8</span> jobs</span>
+        </div>
 
-    <script src="./script.js"></script>
+        <div class="flex gap-2 mb-8">
+            <button onclick="changeTab('all', this)" class="tab-btn tab-active px-6 py-2 rounded-md border border-gray-200 bg-white text-sm font-medium">All</button>
+            <button onclick="changeTab('interview', this)" class="tab-btn px-6 py-2 rounded-md border border-gray-200 bg-white text-sm font-medium">Interview</button>
+            <button onclick="changeTab('rejected', this)" class="tab-btn px-6 py-2 rounded-md border border-gray-200 bg-white text-sm font-medium">Rejected</button>
+        </div>
+
+        <div id="jobs-list" class="space-y-4">
+            <div id="job-1" data-status="all" class="job-card bg-white p-6 rounded-xl border border-gray-100 shadow-sm relative">
+                <button onclick="deleteCard('job-1')" class="absolute top-6 right-6 p-2 rounded-full border border-gray-100 text-gray-400 cursor-pointer hover:text-red-500 transition-all flex items-center justify-center w-10 h-10">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <h4 class="text-xl font-bold text-[#002C5C] mb-1">Mobile First Corp</h4>
+                <p class="text-[#64748B] text-sm mb-3">React Native Developer</p>
+                <p class="text-[#64748B] text-sm mb-4">Remote • Full-time • $130,000 - $175,000</p>
+                <span class="inline-block bg-[#EEF4FF] text-[#002C5C] text-[10px] font-bold px-4 py-3 rounded mb-4 uppercase">Not Applied</span>
+                <p class="text-[#323B49] text-sm mb-6">Build cross-platform mobile applications using React Native. Work on products used by millions.</p>
+                <div class="flex gap-4">
+                    <button onclick="updateStatus('job-1', 'interview')" class="int-btn px-6 py-2 rounded-md border-2 border-[#00C07F] text-[#00C07F] font-bold text-xs transition-all">INTERVIEW</button>
+                    <button onclick="updateStatus('job-1', 'rejected')" class="rej-btn px-6 py-2 rounded-md border-2 border-[#FF4D4D] text-[#FF4D4D] font-bold text-xs transition-all">REJECTED</button>
+                </div>
+            </div>
+
+            <div id="job-2" data-status="all" class="job-card bg-white p-6 rounded-xl border border-gray-100 shadow-sm relative">
+                <button onclick="deleteCard('job-2')" class="absolute top-6 right-6 p-2 rounded-full border border-gray-100 text-gray-400 cursor-pointer hover:text-red-500 transition-all flex items-center justify-center w-10 h-10">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <h4 class="text-xl font-bold text-[#002C5C] mb-1">WebFlow Agency</h4>
+                <p class="text-[#64748B] text-sm mb-3">Web Designer & Developer</p>
+                <p class="text-[#64748B] text-sm mb-4">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
+                <span class="inline-block bg-[#EEF4FF] text-[#002C5C] text-[10px] font-bold px-4 py-3 rounded mb-4 uppercase">Not Applied</span>
+                <p class="text-[#323B49] text-sm mb-6">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                <div class="flex gap-4">
+                    <button onclick="updateStatus('job-2', 'interview')" class="int-btn px-6 py-2 rounded-md border-2 border-[#00C07F] text-[#00C07F] font-bold text-xs transition-all">INTERVIEW</button>
+                    <button onclick="updateStatus('job-2', 'rejected')" class="rej-btn px-6 py-2 rounded-md border-2 border-[#FF4D4D] text-[#FF4D4D] font-bold text-xs transition-all">REJECTED</button>
+                </div>
+            </div>
+            
+            <div id="job-3" data-status="all" class="job-card bg-white p-6 rounded-xl border border-gray-100 shadow-sm relative">
+                <button onclick="deleteCard('job-3')" class="absolute top-6 right-6 p-2 rounded-full border border-gray-100 text-gray-400 cursor-pointer hover:text-red-500 transition-all flex items-center justify-center w-10 h-10">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <h4 class="text-xl font-bold text-[#002C5C] mb-1">DataViz Solutions</h4>
+                <p class="text-[#64748B] text-sm mb-3">Data Visualization Specialist</p>
+                <p class="text-[#64748B] text-sm mb-4">Boston, MA • Full-time • $125,000 - $165,000</p>
+                <span class="inline-block bg-[#EEF4FF] text-[#002C5C] text-[10px] font-bold px-4 py-3 rounded mb-4 uppercase">Not Applied</span>
+                <p class="text-[#323B49] text-sm mb-6">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                <div class="flex gap-4">
+                    <button onclick="updateStatus('job-3', 'interview')" class="int-btn px-6 py-2 rounded-md border-2 border-[#00C07F] text-[#00C07F] font-bold text-xs transition-all">INTERVIEW</button>
+                    <button onclick="updateStatus('job-3', 'rejected')" class="rej-btn px-6 py-2 rounded-md border-2 border-[#FF4D4D] text-[#FF4D4D] font-bold text-xs transition-all">REJECTED</button>
+                </div>
+            </div>
+            
+            <div id="job-4" data-status="all" class="job-card bg-white p-6 rounded-xl border border-gray-100 shadow-sm relative">
+                <button onclick="deleteCard('job-4')" class="absolute top-6 right-6 p-2 rounded-full border border-gray-100 text-gray-400 cursor-pointer hover:text-red-500 transition-all flex items-center justify-center w-10 h-10">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <h4 class="text-xl font-bold text-[#002C5C] mb-1">CloudFirst Inc</h4>
+                <p class="text-[#64748B] text-sm mb-3">Backend Developer</p>
+                <p class="text-[#64748B] text-sm mb-4">Seattle, WA • Full-time • $140,000 - $190,000</p>
+                <span class="inline-block bg-[#EEF4FF] text-[#002C5C] text-[10px] font-bold px-4 py-3 rounded mb-4 uppercase">Not Applied</span>
+                <p class="text-[#323B49] text-sm mb-6">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                <div class="flex gap-4">
+                    <button onclick="updateStatus('job-4', 'interview')" class="int-btn px-6 py-2 rounded-md border-2 border-[#00C07F] text-[#00C07F] font-bold text-xs transition-all">INTERVIEW</button>
+                    <button onclick="updateStatus('job-4', 'rejected')" class="rej-btn px-6 py-2 rounded-md border-2 border-[#FF4D4D] text-[#FF4D4D] font-bold text-xs transition-all">REJECTED</button>
+                </div>
+            </div>
+
+            <div id="job-5" data-status="all" class="job-card bg-white p-6 rounded-xl border border-gray-100 shadow-sm relative">
+                <button onclick="deleteCard('job-5')" class="absolute top-6 right-6 p-2 rounded-full border border-gray-100 text-gray-400 cursor-pointer hover:text-red-500 transition-all flex items-center justify-center w-10 h-10">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <h4 class="text-xl font-bold text-[#002C5C] mb-1">Innovation Labs</h4>
+                <p class="text-[#64748B] text-sm mb-3">UI/UX Engineer</p>
+                <p class="text-[#64748B] text-sm mb-4">Austin, TX • Full-time • $110,000 - $150,000</p>
+                <span class="inline-block bg-[#EEF4FF] text-[#002C5C] text-[10px] font-bold px-4 py-3 rounded mb-4 uppercase">Not Applied</span>
+                <p class="text-[#323B49] text-sm mb-6">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+                <div class="flex gap-4">
+                    <button onclick="updateStatus('job-5', 'interview')" class="int-btn px-6 py-2 rounded-md border-2 border-[#00C07F] text-[#00C07F] font-bold text-xs transition-all">INTERVIEW</button>
+                    <button onclick="updateStatus('job-5', 'rejected')" class="rej-btn px-6 py-2 rounded-md border-2 border-[#FF4D4D] text-[#FF4D4D] font-bold text-xs transition-all">REJECTED</button>
+                </div>
+            </div>
+            
+            <div id="job-6" data-status="all" class="job-card bg-white p-6 rounded-xl border border-gray-100 shadow-sm relative">
+                <button onclick="deleteCard('job-6')" class="absolute top-6 right-6 p-2 rounded-full border border-gray-100 text-gray-400 cursor-pointer hover:text-red-500 transition-all flex items-center justify-center w-10 h-10">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <h4 class="text-xl font-bold text-[#002C5C] mb-1">MegaCorp Solutions</h4>
+                <p class="text-[#64748B] text-sm mb-3">JavaScript Developer</p>
+                <p class="text-[#64748B] text-sm mb-4">New York, NY • Full-time • $130,000 - $170,000</p>
+                <span class="inline-block bg-[#EEF4FF] text-[#002C5C] text-[10px] font-bold px-4 py-3 rounded mb-4 uppercase">Not Applied</span>
+                <p class="text-[#323B49] text-sm mb-6">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+                <div class="flex gap-4">
+                    <button onclick="updateStatus('job-6', 'interview')" class="int-btn px-6 py-2 rounded-md border-2 border-[#00C07F] text-[#00C07F] font-bold text-xs transition-all">INTERVIEW</button>
+                    <button onclick="updateStatus('job-6', 'rejected')" class="rej-btn px-6 py-2 rounded-md border-2 border-[#FF4D4D] text-[#FF4D4D] font-bold text-xs transition-all">REJECTED</button>
+                </div>
+            </div>
+
+            <div id="job-7" data-status="all" class="job-card bg-white p-6 rounded-xl border border-gray-100 shadow-sm relative">
+                <button onclick="deleteCard('job-7')" class="absolute top-6 right-6 p-2 rounded-full border border-gray-100 text-gray-400 cursor-pointer hover:text-red-500 transition-all flex items-center justify-center w-10 h-10">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <h4 class="text-xl font-bold text-[#002C5C] mb-1">StartupXYZ</h4>
+                <p class="text-[#64748B] text-sm mb-3">Full Stack Engineer</p>
+                <p class="text-[#64748B] text-sm mb-4">Remote • Full-time • $120,000 - $160,000</p>
+                <span class="inline-block bg-[#EEF4FF] text-[#002C5C] text-[10px] font-bold px-4 py-3 rounded mb-4 uppercase">Not Applied</span>
+                <p class="text-[#323B49] text-sm mb-6">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+                <div class="flex gap-4">
+                    <button onclick="updateStatus('job-7', 'interview')" class="int-btn px-6 py-2 rounded-md border-2 border-[#00C07F] text-[#00C07F] font-bold text-xs transition-all">INTERVIEW</button>
+                    <button onclick="updateStatus('job-7', 'rejected')" class="rej-btn px-6 py-2 rounded-md border-2 border-[#FF4D4D] text-[#FF4D4D] font-bold text-xs transition-all">REJECTED</button>
+                </div>
+            </div>
+            
+            <div id="job-8" data-status="all" class="job-card bg-white p-6 rounded-xl border border-gray-100 shadow-sm relative">
+                <button onclick="deleteCard('job-8')" class="absolute top-6 right-6 p-2 rounded-full border border-gray-100 text-gray-400 cursor-pointer hover:text-red-500 transition-all flex items-center justify-center w-10 h-10">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <h4 class="text-xl font-bold text-[#002C5C] mb-1">TechCorp Industries</h4>
+                <p class="text-[#64748B] text-sm mb-3">Senior Frontend Developer</p>
+                <p class="text-[#64748B] text-sm mb-4">San Francisco, CA • Full-time • $130,000 - $175,000</p>
+                <span class="inline-block bg-[#EEF4FF] text-[#002C5C] text-[10px] font-bold px-4 py-3 rounded mb-4 uppercase">Not Applied</span>
+                <p class="text-[#323B49] text-sm mb-6">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+                <div class="flex gap-4">
+                    <button onclick="updateStatus('job-8', 'interview')" class="int-btn px-6 py-2 rounded-md border-2 border-[#00C07F] text-[#00C07F] font-bold text-xs transition-all">INTERVIEW</button>
+                    <button onclick="updateStatus('job-8', 'rejected')" class="rej-btn px-6 py-2 rounded-md border-2 border-[#FF4D4D] text-[#FF4D4D] font-bold text-xs transition-all">REJECTED</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="no-jobs" class="hidden bg-white border border-gray-100 rounded-lg p-20 flex flex-col items-center justify-center text-center shadow-sm">
+            <img src="./jobs.png" class="w-20 mb-4 opacity-40">
+            <h3 class="text-2xl font-bold text-[#002C5C]">No jobs available</h3>
+            <p class="text-[#64748B] text-sm">Check back soon for new job opportunities</p>
+        </div>
+    </div>
+    </main>
+
+
+    <script src="./script.js"></script> 
 </body>
 </html>
