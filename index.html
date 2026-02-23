@@ -20,7 +20,28 @@
     </style>
 </head>
 <body class="p-6 md:p-12">
-    
+    <header>
+        <h1 class="text-3xl font-bold text-[#002C5C] mb-8">Job Application Tracker</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <div class="p-6 rounded-xl border border-gray-100 shadow-sm">
+                <p class="text-gray-500 font-medium mb-1">Total</p>
+                <h2 id="total-count" class="text-4xl font-bold text-[#002C5C]">8</h2>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                <p class="text-gray-500 font-medium mb-1">Interview</p>
+                <h2 id="interview-count" class="text-4xl font-bold text-[#00C07F]">0</h2>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                <p class="text-gray-500 font-medium mb-1">Rejected</p>
+                <h2 id="rejected-count" class="text-4xl font-bold text-[#FF4D4D]">0</h2>
+            </div>
+        </div>
+
+        <hr class="text-gray-300 mb-10">
+    </header>
 
     <script src="./script.js"></script>
 </body>
